@@ -65,13 +65,14 @@
 
         /* Lignes néon dynamiques */
         .neon-lines {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            pointer-events: none;
             z-index: -1;
+            overflow: hidden;
         }
 
         .line {
@@ -132,7 +133,7 @@
 
         /* Effet lumineux circulaire */
         .neon-glow {
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             width: 300px;
@@ -141,7 +142,7 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
             animation: pulse 3s ease-in-out infinite;
-            z-index: -1;
+            z-index: -2;
         }
 
         @keyframes pulse {
@@ -153,6 +154,27 @@
                 transform: scale(1.2);
                 opacity: 1;
             }
+        }
+
+        /* Section des sources */
+        .sources {
+            margin-top: 40px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            color: #bdc3c7;
+        }
+
+        .sources h2 {
+            color: #f1c40f;
+        }
+
+        .sources ul {
+            padding-left: 20px;
+        }
+
+        .sources ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -211,6 +233,16 @@
         <h2>Conclusion</h2>
         <div class="section">
             En conclusion, les valeurs de liberté, d'égalité et de fraternité sont essentielles à la République française. Elles doivent être constamment défendues et promues pour garantir une société juste et équitable.
+        </div>
+
+        <!-- Sources -->
+        <div class="sources">
+            <h2>Sources</h2>
+            <ul>
+                <li><a href="https://www.elysee.fr/la-presidence/liberte-egalite-fraternite" target="_blank">Elysée - Liberté, Égalité, Fraternité</a></li>
+                <li><a href="https://www.info.gouv.fr/actualite/la-petite-histoire-de-la-devise-francaise-liberte-egalite-fraternite" target="_blank">La petite histoire de la devise française</a></li>
+                <li><a href="https://valeurs-de-la-republique.reseau-canope.fr/decouvrir/notice/egalite/poursuivre-la-reflexion-historique-la-devise-republicaine" target="_blank">Poursuivre la réflexion historique sur la devise républicaine</a></li>
+            </ul>
         </div>
     </div>
 </body>
