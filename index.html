@@ -53,7 +53,6 @@
             text-decoration: underline;
         }
 
-        /* Conteneur principal pour s'assurer que le contenu reste visible */
         .main-content {
             position: relative;
             z-index: 10;
@@ -63,19 +62,58 @@
             margin: 20px;
         }
 
-        /* Lignes néon dynamiques */
-        .neon-lines {
+        .sources {
+            margin-top: 40px;
+            color: #bdc3c7;
+        }
+
+        .sources h2 {
+            color: #f1c40f;
+        }
+
+        .sources ul {
+            padding-left: 20px;
+        }
+
+        .sources ul li {
+            margin-bottom: 10px;
+        }
+
+        .annotation {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .fin {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .fin h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .fin p {
+            font-size: 1em;
+            color: white;
+        }
+
+        /* Fond animé */
+        .background-animation {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
             z-index: -1;
             overflow: hidden;
         }
 
-        .line {
+        .background-animation .line {
             position: absolute;
             width: 2px;
             height: 300%;
@@ -101,48 +139,46 @@
             }
         }
 
-        .line:nth-child(1) {
+        .background-animation .line:nth-child(1) {
             left: 10%;
             animation-delay: 0s;
             animation-duration: 5s;
         }
 
-        .line:nth-child(2) {
+        .background-animation .line:nth-child(2) {
             left: 30%;
             animation-delay: 1s;
             animation-duration: 6s;
         }
 
-        .line:nth-child(3) {
+        .background-animation .line:nth-child(3) {
             left: 50%;
             animation-delay: 2s;
             animation-duration: 7s;
         }
 
-        .line:nth-child(4) {
+        .background-animation .line:nth-child(4) {
             left: 70%;
             animation-delay: 3s;
             animation-duration: 8s;
         }
 
-        .line:nth-child(5) {
+        .background-animation .line:nth-child(5) {
             left: 90%;
             animation-delay: 4s;
             animation-duration: 9s;
         }
 
-        /* Effet lumineux circulaire */
         .neon-glow {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
             transform: translate(-50%, -50%);
             border-radius: 50%;
             animation: pulse 3s ease-in-out infinite;
-            z-index: -2;
         }
 
         @keyframes pulse {
@@ -155,89 +191,64 @@
                 opacity: 1;
             }
         }
-
-        /* Section des sources */
-        .sources {
-            margin-top: 40px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            color: #bdc3c7;
-        }
-
-        .sources h2 {
-            color: #f1c40f;
-        }
-
-        .sources ul {
-            padding-left: 20px;
-        }
-
-        .sources ul li {
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
-    <!-- Lignes dynamiques en arrière-plan -->
-    <div class="neon-lines">
+    <!-- Fond animé -->
+    <div class="background-animation">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
+        <div class="neon-glow"></div>
     </div>
 
-    <!-- Effet lumineux circulaire -->
-    <div class="neon-glow"></div>
-
-    <!-- Contenu principal -->
     <div class="main-content">
         <h1>Les valeurs de la République française</h1>
 
-        <!-- Introduction -->
         <h2>Introduction</h2>
         <div class="section">
             La République française repose sur trois valeurs fondamentales : <span class="important">liberté</span>, <span class="important">égalité</span>, et <span class="important">fraternité</span>. <br>
             Ces principes, inscrits dans la devise nationale, sont les piliers de notre système démocratique. Ils reflètent les idéaux qui unissent les citoyens français et structurent notre société depuis la Révolution de 1789.
         </div>
 
-        <!-- Problématique -->
         <h2>Problématique</h2>
         <div class="problématique">
             Comment la République française parvient-elle à garantir l’application des valeurs fondamentales de liberté, d’égalité et de fraternité ?
         </div>
 
-        <!-- I. La Liberté -->
         <h2>I. La Liberté</h2>
         <div class="section">
             La liberté est au cœur des droits fondamentaux des citoyens. Elle garantit à chacun la possibilité de s'exprimer ses opinions, de pratiquer la religion de son choix, et de vivre sans contrainte. <br>
             La liberté d’expression, par exemple, permet aux individus de débattre librement, favorisant ainsi une société ouverte et démocratique. Toutefois, cette liberté a des limites : elle ne doit pas porter atteinte aux droits d’autrui ni troubler l'ordre public.
         </div>
 
-        <!-- II. L'Égalité -->
         <h2>II. L'Égalité</h2>
         <div class="section">
             L'égalité représente le principe selon lequel tous les citoyens doivent être traités de manière équitable, sans distinction de race, de sexe, de religion ou d’origine sociale. <br>
             Dans une République, cela signifie que chacun a les mêmes droits et devoirs devant la loi. Les institutions publiques, comme l’école et la justice, jouent un rôle essentiel dans la promotion de cette égalité.
         </div>
 
-        <!-- III. La Fraternité -->
         <h2>III. La Fraternité</h2>
         <div class="section">
             La fraternité incarne l’esprit de solidarité entre les citoyens. Elle appelle à une entraide mutuelle, essentielle pour construire une communauté harmonieuse. <br>
             Cela se traduit par des actions concrètes comme la lutte contre la pauvreté, le respect des différences, et l’accueil des personnes en difficulté. La fraternité reste un idéal à atteindre dans une société parfois marquée par des tensions.
         </div>
 
-        <!-- Conclusion -->
         <h2>Conclusion</h2>
         <div class="section">
             En conclusion, les valeurs de liberté, d'égalité et de fraternité sont essentielles à la République française. Elles doivent être constamment défendues et promues pour garantir une société juste et équitable.
         </div>
 
-        <!-- Sources -->
+        <div class="fin">
+            <h2>FIN</h2>
+            <p>Classe, si vous avez des questions, levez la main.</p>
+        </div>
+
         <div class="sources">
             <h2>Sources</h2>
+            <span class="annotation">(Cliquez pour visiter les sites. Si vous avez des questions, n’hésitez pas !)</span>
             <ul>
                 <li><a href="https://www.elysee.fr/la-presidence/liberte-egalite-fraternite" target="_blank">Elysée - Liberté, Égalité, Fraternité</a></li>
                 <li><a href="https://www.info.gouv.fr/actualite/la-petite-histoire-de-la-devise-francaise-liberte-egalite-fraternite" target="_blank">La petite histoire de la devise française</a></li>
