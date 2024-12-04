@@ -9,9 +9,14 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            color: white;
+            background: linear-gradient(135deg, #001f3f, #000000);
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden;
         }
         h1, h2 {
-            color: #2c3e50;
+            color: #f1c40f;
         }
         .important {
             font-weight: bold;
@@ -34,19 +39,122 @@
         }
         .sources {
             margin-top: 40px;
-            font-size: 0.8em; /* Taille de police plus petite */
+            font-size: 0.8em;
             color: #34495e;
         }
         a {
-            color: #3498db; /* Couleur des liens */
-            text-decoration: none; /* Pas de soulignement */
+            color: #3498db;
+            text-decoration: none;
         }
         a:hover {
-            text-decoration: underline; /* Soulignement au survol */
+            text-decoration: underline;
+        }
+
+        /* Lignes néon dynamiques */
+        .neon-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            height: 300%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 255, 255, 0.8), transparent);
+            animation: move 5s linear infinite, rotate 10s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes rotate {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+        }
+
+        .line:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 5s;
+        }
+
+        .line:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+            animation-duration: 6s;
+        }
+
+        .line:nth-child(3) {
+            left: 50%;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
+
+        .line:nth-child(4) {
+            left: 70%;
+            animation-delay: 3s;
+            animation-duration: 8s;
+        }
+
+        .line:nth-child(5) {
+            left: 90%;
+            animation-delay: 4s;
+            animation-duration: 9s;
+        }
+
+        /* Ajout d'effets lumineux circulaires */
+        .neon-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Ajout des lignes dynamiques -->
+    <div class="neon-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <!-- Ajout d'un effet lumineux circulaire au centre -->
+    <div class="neon-glow"></div>
+
     <h1>Les valeurs de la République française</h1>
 
     <!-- Introduction -->
@@ -82,7 +190,7 @@
     <div class="section">
         La fraternité incarne l’esprit de solidarité entre les citoyens. Elle appelle à une entraide mutuelle, essentielle pour construire une communauté harmonieuse. <br>
         Cela se traduit par des actions concrètes comme la lutte contre la pauvreté, le respect des différences, et l’accueil des personnes en difficulté. La fraternité reste un idéal à atteindre dans une société parfois marquée par des tensions. 
-        <img src="https://img.lamontagne.fr/Y6mjzNh_m9JI1znQy0ZB2os1pYhESFjdHmPp8hYD75o/fit/657/ 438/sm/0/bG9jYWw6Ly9Y2F0aW9uLzIwMjAvMDkvMjYvMjA1MjY0L2ZpbGUvY2hhcnRlcjE1MjY0L2ltYWdlcy9pbWFnZS5wbmc" alt="Solidarité entre citoyens">
+        <img src="https://img.lamontagne.fr/Y6mjzNh_m9JI1znQy0ZB2os1pYhESFjdHmPp8hYD75o/fit/657/438/sm/0/bG9jYWw6Ly9Y2F0aW9uLzIwMjAvMDkvMjYvMjA1MjY0L2ZpbGUvY2hhcnRlcjE1MjY0L2ltYWdlcy9pbWFnZS5wbmc" alt="Solidarité entre citoyens">
     </div>
 
     <!-- Conclusion -->
@@ -101,4 +209,3 @@
         </ul>
     </div>
 </body>
-</html>
