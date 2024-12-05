@@ -19,11 +19,23 @@
 
         h1, h2 {
             color: #f1c40f;
+            text-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6);
+            animation: highlightAnimation 1.5s infinite alternate;
         }
 
-        .important {
-            font-weight: bold;
-            color: #e74c3c;
+        @keyframes highlightAnimation {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 0, 0.6), 0 0 20px rgba(255, 255, 0, 0.4);
+                color: #f1c40f;
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 255, 0, 1), 0 0 50px rgba(255, 255, 0, 0.8);
+                color: #e67e22;
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6);
+                color: #f1c40f;
+            }
         }
 
         .section {
@@ -218,6 +230,15 @@
                 opacity: 1;
             }
         }
+
+        /* Style pour la section II */
+        .section-ii {
+            margin-top: 40px;
+            font-size: 1.3em;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+        }
     </style>
 </head>
 <body>
@@ -241,7 +262,7 @@
         <h1>Les valeurs de la République française</h1>
         <h2>Introduction</h2>
         <div class="section">
-            La République française repose sur trois valeurs fondamentales : <span class="important">liberté</span>, <span class="important">égalité</span>, et <span class="important">fraternité</span>. <br>
+            La République française repose sur trois valeurs fondamentales : <span class="highlight">liberté</span>, <span class="highlight">égalité</span>, et <span class="highlight">fraternité</span>. <br>
             Ces principes, inscrits dans la devise nationale, sont les piliers de notre système démocratique. Ils reflètent les idéaux qui unissent les citoyens français et structurent notre société depuis la Révolution de 1789.
         </div>
         <h2>Problématique</h2>
@@ -251,6 +272,10 @@
         <h2>I. La Liberté</h2>
         <div class="section">
             La liberté est au cœur des droits fondamentaux des citoyens. Elle garantit à chacun la possibilité de s'exprimer ses opinions, de pratiquer la religion de son choix, et de vivre sans contrainte.
+        </div>
+        <h2>II. L'égalité</h2>
+        <div class="section-ii">
+            L'égalité des droits est un principe fondamental de la République française. Cela signifie que chaque citoyen, peu importe son origine, son sexe ou sa condition sociale, doit avoir les mêmes droits et devoirs.
         </div>
         <h2>Conclusion</h2>
         <div class="section">
@@ -266,4 +291,8 @@
             <ul>
                 <li><a href="https://www.elysee.fr/la-presidence/liberte-egalite-fraternite" target="_blank">Elysée - Liberté, Égalité, Fraternité</a></li>
                 <li><a href="https://www.info.gouv.fr/actualite/la-petite-histoire-de-la-devise-francaise-liberte-egalite-fraternite" target="_blank">La petite histoire de la devise française</a></li>
-                <li><a
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
