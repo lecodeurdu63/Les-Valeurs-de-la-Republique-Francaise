@@ -109,7 +109,6 @@ a:hover {
     animation: float linear infinite, fade ease-in-out infinite;
 }
 
-/* Animation des particules */
 @keyframes float {
     0% {
         transform: translate(0, 0);
@@ -131,7 +130,7 @@ a:hover {
     }
 }
 
-/* Particules générées aléatoirement */
+/* Génération aléatoire des particules */
 .particle {
     animation-duration: 4s;
     animation-timing-function: linear;
@@ -143,14 +142,4 @@ a:hover {
 
 .particle:nth-child(even) {
     animation-duration: 5s;
-}
-
-/* Générer des particules de manière aléatoire */
-@for $i from 1 through 200 {
-    .particle:nth-child(#{$i}) {
-        --move-x: #{random(400) - 200}px;
-        --move-y: #{random(400) - 200}px;
-        top: #{random(100)}%;
-        left: #{random(100)}%;
-    }
 }
