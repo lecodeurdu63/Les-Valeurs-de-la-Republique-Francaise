@@ -28,6 +28,7 @@
 
         .section {
             margin-bottom: 30px;
+            position: relative;
         }
 
         img {
@@ -98,8 +99,34 @@
         }
 
         .fin p {
-            font-size: 1em;
+            font-size: 1.5em;
+            font-weight: bold;
             color: white;
+        }
+
+        /* Particules */
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-50px) scale(1.2);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
         }
 
         /* Fond animé */
@@ -202,59 +229,41 @@
         <div class="line"></div>
         <div class="line"></div>
         <div class="neon-glow"></div>
+        <!-- Particules -->
+        <div class="particle" style="top: 20%; left: 10%; animation-duration: 4s;"></div>
+        <div class="particle" style="top: 30%; left: 50%; animation-duration: 5s;"></div>
+        <div class="particle" style="top: 40%; left: 70%; animation-duration: 6s;"></div>
+        <div class="particle" style="top: 60%; left: 30%; animation-duration: 7s;"></div>
+        <div class="particle" style="top: 80%; left: 80%; animation-duration: 4s;"></div>
     </div>
 
     <div class="main-content">
         <h1>Les valeurs de la République française</h1>
-
         <h2>Introduction</h2>
         <div class="section">
             La République française repose sur trois valeurs fondamentales : <span class="important">liberté</span>, <span class="important">égalité</span>, et <span class="important">fraternité</span>. <br>
             Ces principes, inscrits dans la devise nationale, sont les piliers de notre système démocratique. Ils reflètent les idéaux qui unissent les citoyens français et structurent notre société depuis la Révolution de 1789.
         </div>
-
         <h2>Problématique</h2>
         <div class="problématique">
             Comment la République française parvient-elle à garantir l’application des valeurs fondamentales de liberté, d’égalité et de fraternité ?
         </div>
-
         <h2>I. La Liberté</h2>
         <div class="section">
-            La liberté est au cœur des droits fondamentaux des citoyens. Elle garantit à chacun la possibilité de s'exprimer ses opinions, de pratiquer la religion de son choix, et de vivre sans contrainte. <br>
-            La liberté d’expression, par exemple, permet aux individus de débattre librement, favorisant ainsi une société ouverte et démocratique. Toutefois, cette liberté a des limites : elle ne doit pas porter atteinte aux droits d’autrui ni troubler l'ordre public.
+            La liberté est au cœur des droits fondamentaux des citoyens. Elle garantit à chacun la possibilité de s'exprimer ses opinions, de pratiquer la religion de son choix, et de vivre sans contrainte.
         </div>
-
-        <h2>II. L'Égalité</h2>
-        <div class="section">
-            L'égalité représente le principe selon lequel tous les citoyens doivent être traités de manière équitable, sans distinction de race, de sexe, de religion ou d’origine sociale. <br>
-            Dans une République, cela signifie que chacun a les mêmes droits et devoirs devant la loi. Les institutions publiques, comme l’école et la justice, jouent un rôle essentiel dans la promotion de cette égalité.
-        </div>
-
-        <h2>III. La Fraternité</h2>
-        <div class="section">
-            La fraternité incarne l’esprit de solidarité entre les citoyens. Elle appelle à une entraide mutuelle, essentielle pour construire une communauté harmonieuse. <br>
-            Cela se traduit par des actions concrètes comme la lutte contre la pauvreté, le respect des différences, et l’accueil des personnes en difficulté. La fraternité reste un idéal à atteindre dans une société parfois marquée par des tensions.
-        </div>
-
         <h2>Conclusion</h2>
         <div class="section">
             En conclusion, les valeurs de liberté, d'égalité et de fraternité sont essentielles à la République française. Elles doivent être constamment défendues et promues pour garantir une société juste et équitable.
         </div>
-
         <div class="fin">
             <h2>FIN</h2>
-            <p>si vous avez des questions, levez la main.</p>
+            <p><strong><span style="font-size: 1.5em;">Classe, si vous avez des questions, levez la main.</span></strong></p>
         </div>
-
         <div class="sources">
             <h2>Sources</h2>
             <span class="annotation">(Cliquez pour visiter les sites. Si vous avez des questions, n’hésitez pas !)</span>
             <ul>
                 <li><a href="https://www.elysee.fr/la-presidence/liberte-egalite-fraternite" target="_blank">Elysée - Liberté, Égalité, Fraternité</a></li>
                 <li><a href="https://www.info.gouv.fr/actualite/la-petite-histoire-de-la-devise-francaise-liberte-egalite-fraternite" target="_blank">La petite histoire de la devise française</a></li>
-                <li><a href="https://valeurs-de-la-republique.reseau-canope.fr/decouvrir/notice/egalite/poursuivre-la-reflexion-historique-la-devise-republicaine" target="_blank">Poursuivre la réflexion historique sur la devise républicaine</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+                <li><a
